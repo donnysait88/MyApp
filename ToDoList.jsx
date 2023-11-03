@@ -1,31 +1,22 @@
-import React from 'react'
+import React from 'react';
 import { StyleSheet, View, Text, ScrollView, Pressable, Image } from 'react-native';
 
-const ToDoList = () => {
+const ToDoList = ({ tasks }) => {
+
+
   return (
       <ScrollView> 
         <View style={{alignItems: 'center' }}>
           <Image source={require("./ape4.png")} style={[styles.image]}/>
         </View>
         <Pressable>
-          <View style={[styles.task, styles.completed]}>
-            <Text style={styles.taskText}>Do Homework</Text>
-          </View>
-        </Pressable>
-        <Pressable>
-          <View style={[styles.task]}>
-            <Text style={styles.taskText}>Review Assignment</Text>
-          </View>
-        </Pressable>
-        <Pressable>
-          <View style={[styles.task, styles.completed]}>
-            <Text style={styles.taskText}>Go to Supermarket</Text>
-          </View>
-        </Pressable>
-        <Pressable>
-          <View style={[styles.task]}>
-            <Text style={styles.taskText}>Go to Concert</Text>
-          </View>
+ 
+          {tasks.map((task) => (
+            <View style={[styles.task, styles.incompleted]}>
+              <Text style={styles.taskText}>{task}</Text>
+            </View>
+          ))} 
+          
         </Pressable>
       </ScrollView>
   )
@@ -35,10 +26,10 @@ const styles = StyleSheet.create({
     task: {
         padding: 10,
         borderBottomWidth: 1,
-        borderColor: '#ccc',
+        borderColor: 'white',
       },
-      completed: {
-        backgroundColor: '#58D68D',
+      incompleted: {
+        backgroundColor: '#F5B041',
       },
       taskText: {
         fontSize: 16,
