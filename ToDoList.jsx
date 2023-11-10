@@ -27,6 +27,9 @@ const styles = StyleSheet.create({
         padding: 10,
         borderBottomWidth: 1,
         borderColor: 'white',
+        marginLeft: 10,
+        marginRight: 10,
+        marginTop: 5,
       },
       incompleted: {
         backgroundColor: '#F5B041',
@@ -43,4 +46,4 @@ const styles = StyleSheet.create({
   });
 
 
-export default ToDoList
+export default ToDoList;

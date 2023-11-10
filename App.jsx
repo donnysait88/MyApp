@@ -14,12 +14,16 @@ import ToDoForm from './ToDoForm';
 
 const App = () => {
 
-  const [tasks, setTasks] = useState(['Do homework', 'Review Assignment', 'Go to supermarket', 'Go to concert', 'Go fishing']);
+  const [tasks, setTasks] = useState(['Do homework', 'Review Assignment', 'Go to supermarket', 'Go to concert']);
+
+  const addTask = (taskText) => {
+    setTasks([...tasks, taskText]);
+  };
 
   return (
     <SafeAreaView>
-      <ToDoList tasks={tasks}/>
-      <ToDoForm />
+      <ToDoList tasks={tasks} />
+      <ToDoForm addTask={addTask} />
     </SafeAreaView>
   );
 }
