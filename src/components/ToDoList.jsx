@@ -7,7 +7,7 @@ const ToDoList = ({ tasks }) => {
   return (
       <ScrollView> 
         <View style={{alignItems: 'center' }}>
-          <Image source={require("./ape4.png")} style={[styles.image]}/>
+          <Image source={require("../images/ape4.png")} style={[styles.image]}/>
         </View>
         <Pressable>
  
